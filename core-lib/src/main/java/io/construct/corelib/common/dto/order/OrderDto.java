@@ -4,6 +4,7 @@ import io.construct.corelib.common.dto.CartItemDto;
 import io.construct.corelib.common.dto.LogisticsDto;
 import io.construct.corelib.common.dto.PaymentDto;
 import io.construct.corelib.common.dto.order.ChangeDto;
+import io.construct.corelib.common.enums.OrderStatus;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,6 @@ public class OrderDto {
     private double totalAmount; // Итоговая сумма
     private LogisticsDto logistics; // Данные логистики
     private PaymentDto payment; // Данные оплаты
-    private String status; // Текущий статус
+    private OrderStatus status; // Текущий статус
     private List<ChangeDto> history; // История изменений
 }
